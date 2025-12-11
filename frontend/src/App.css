@@ -1,0 +1,934 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+input,
+button {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Link Styles */
+/* ==================================================================
+   LOGIN PAGE - Beautiful Full-Screen Background + Glass Card
+   ================================================================== */
+
+   .login-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  /* Stunning Background */
+/* Fixed Login Background - Working Payment Theme */
+.login-background {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),  /* Dark overlay for readability */
+    url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat fixed;  /* Direct Unsplash payment/digital background */
+  z-index: 1;
+}
+  
+  /* Glassmorphism Login Card */
+  .login-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 24px;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    animation: floatIn 0.8s ease-out;
+  }
+  
+  .login-header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 12px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  
+  .login-header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    margin: 0 0 32px;
+  }
+  
+  /* Form Inputs */
+  .login-form input {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .login-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .login-form input:focus {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  
+  /* Login Button */
+  .login-btn {
+    width: 100%;
+    padding: 16px;
+    margin: 20px 0 16px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  }
+  
+  .login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.5);
+    background: linear-gradient(135deg, #5a6fd8, #6a4190);
+  }
+  
+  /* Error Alert */
+  .error-alert {
+    background: rgba(239, 68, 68, 0.25);
+    color: #fca5a5;
+    padding: 14px;
+    border-radius: 12px;
+    margin: 16px 0;
+    font-size: 14.5px;
+    border: 1px solid rgba(254, 178, 178, 0.4);
+  }
+
+  .register-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15.5px;
+    margin-top: 28px;
+  }
+  
+  .register-link a {
+    color: #c4b5fd;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+/* ==================================================================
+   REGISTER PAGE - Beautiful Full-Screen Glass Card (Same as Login)
+   ================================================================== */
+
+   .register-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  /* Same stunning background as Login */
+  .register-background {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
+      url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat fixed;
+    z-index: 1;
+  }
+  
+  /* Glassmorphism Card */
+  .register-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 26px;
+    padding: 50px 42px;
+    width: 100%;
+    max-width: 460px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+    animation: floatIn 0.9s ease-out;
+  }
+  
+  .register-header h1 {
+    font-size: 38px;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 14px;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.4);
+  }
+  
+  .register-header p {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 16.5px;
+    margin: 0 0 34px;
+    line-height: 1.5;
+  }
+  
+  /* Form Styling */
+  .register-form input {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 11px 0;
+    border: none;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .register-form input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .register-form input:focus {
+    background: rgba(255, 255, 255, 0.38);
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
+  }
+  
+  /* Register Button */
+  .register-btn {
+    width: 100%;
+    padding: 18px;
+    margin: 24px 0 18px;
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 18.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.4);
+  }
+  
+  .register-btn:hover {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(34, 197, 94, 0.5);
+  }
+  
+  /* Error & Links */
+  .error-alert {
+    background: rgba(239, 68, 68, 0.3);
+    color: #fca5a5;
+    padding: 14px;
+    border-radius: 12px;
+    margin: 16px 0;
+    font-size: 14.5px;
+    border: 1px solid rgba(254, 178, 178, 0.4);
+  }
+  
+  .login-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15.5px;
+    margin-top: 28px;
+  }
+  
+  .login-link a {
+    color: #c4b5fd;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Reuse same animation */
+  @keyframes floatIn {
+    from { opacity: 0; transform: translateY(50px) scale(0.94); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  
+  @media (max-width: 480px) {
+    .register-card {
+      margin: 20px;
+      padding: 40px 32px;
+    }
+    .register-header h1 {
+      font-size: 32px;
+    }
+  }
+
+/* ==================================================================
+  HOME PAGE - Beautiful Bill Payment Dashboard (Electricity, Water, Gas)
+  ================================================================== */
+
+.homepage-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8faff 0%, #eef2ff 100%);
+  padding: 32px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Welcome Header */
+.homepage-container header {
+  /* --- CRUCIAL CHANGE: Set positioning context --- */
+  position: relative; 
+  /* ------------------------------------------------ */
+  text-align: center;
+  margin-bottom: 40px;
+  /* Add padding to the top/right/left so the button and text don't touch the edge */
+  padding: 1rem 1rem 0; 
+}
+
+.homepage-container header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.homepage-container header p {
+  font-size: 16.5px;
+  color: #64748b;
+  margin: 10px 0 0;
+}
+
+/* --- LOGOUT BUTTON STYLES (NEW) --- */
+.logout-btn {
+  /* Positioning relative to .welcome-header */
+  position: absolute;
+  top: 10px;    /* 10px from the top edge of the header */
+  right: 10px;  /* 10px from the right edge of the header */
+  height: 30px;
+  width: 100px;
+  /* Visual Styling */
+  padding: 0.5rem 1rem;
+  background-color: #dc3545; /* Red color for logout */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Slightly smoother corners */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.add-service-btn {
+  /* Positioning relative to .welcome-header */
+  position: absolute;
+  top: 10px;    /* 10px from the top edge of the header */
+  right: 175px;  /* 10px from the right edge of the header */
+  height: 30px;
+  width: 160px;
+  /* Visual Styling */
+  padding: 0.5rem 1rem;
+  background-color: #47a4f4; /* Red color for logout */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Slightly smoother corners */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: translateY(-1px);
+}
+/* ---------------------------------- */
+
+/* Main Flex Layout */
+.homepage-container > div:nth-child(2) {
+  display: flex;
+  gap: 32px;
+  max-width: 1300px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* 3 Utility Cards Grid */
+.homepage-container > div:nth-child(2) > div:first-child {
+  flex: 1 1 700px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Individual Utility Card */
+.homepage-container .utility-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.homepage-container .utility-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.homepage-container .utility-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 20px 20px 0 0;
+}
+
+/* Card Header: Icon + Name */
+.homepage-container .utility-card > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.homepage-container .utility-card > div:first-child span {
+  font-size: 40px;
+}
+
+.homepage-container .utility-card h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Amount & Due Text */
+.homepage-container .utility-card > div:nth-child(2) {
+  margin-bottom: 18px;
+}
+
+.homepage-container .utility-card > div:nth-child(2) > div:first-child {
+  font-size: 34px;
+  font-weight: 800;
+  color: #ef4444;
+  line-height: 1;
+}
+
+.homepage-container .utility-card > div:nth-child(2) > div:first-child + div {
+  font-size: 15px;
+  color: #64748b;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* Zero Amount Styling */
+/* Note: :contains() is not a standard CSS selector and will only work if you 
+          are using a JavaScript library that supports it. 
+          Standard CSS relies on a class name like '.zero' on the amount div. */
+/* .homepage-container .utility-card > div:nth-child(2) > div:first-child:contains('0.00') {
+  color: #94a3b8 !important;
+} */
+
+/* --- Provider Info (Added in previous step) --- */
+.provider-info {
+  font-size: 14px;
+  color: #475569;
+  margin: 10px 0;
+  font-weight: 500;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 10px;
+}
+
+.provider-info strong {
+  font-weight: 600;
+  color: #1e293b;
+}
+/* ------------------------------------------------- */
+
+/* Cashback Line */
+.homepage-container .utility-card > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px dashed #e2e8f0;
+  font-size: 13.5px;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+/* Sidebar */
+.homepage-container aside {
+  flex: 0 1 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Total Due Card */
+.homepage-container .total-due-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.homepage-container .total-due-card h3 {
+  margin: 0 0 16px;
+  font-size: 19px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.homepage-container .total-due-card > div:nth-child(2) {
+  font-size: 48px;
+  font-weight: 800;
+  color: #00000094;
+  margin: 8px 0;
+}
+
+/* .homepage-container .total-due-card > div:nth-child(2):contains('0.00') {
+  color: #94a3b8;
+} */
+
+/* Single Make Payment Button */
+.homepage-container .total-due-card button {
+  margin-top: 24px;
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);
+}
+
+.homepage-container .total-due-card button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.45);
+}
+
+.homepage-container .total-due-card button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Reminders Card */
+.homepage-container .reminders-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.homepage-container .reminders-card h3 {
+  margin: 0 0 20px;
+  font-size: 18px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.homepage-container .reminders-card p {
+  color: #94a3b8;
+  font-size: 15px;
+  text-align: center;
+  margin: 20px 0 0;
+  font-style: italic;
+}
+
+.homepage-container .reminders-card > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  background: #f8fafc;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-size: 14.5px;
+  color: #475569;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .homepage-container > div:nth-child(2) {
+    flex-direction: column;
+  }
+  .homepage-container aside {
+    flex: 1;
+  }
+  /* On smaller screens, move the logout button slightly inward */
+  .logout-btn {
+    top: 15px; 
+    right: 15px;
+  }
+}
+
+/* AdminPage.css */
+.admin-container {
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.admin-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.admin-header h1 {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    background-color: #e9ecef;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #495057;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.tab-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tab-content h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e9ecef;
+}
+
+.no-data {
+    text-align: center;
+    color: #6c757d;
+    padding: 40px;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    padding: 40px;
+    border: 1px solid #dc3545;
+    background-color: #f8d7da;
+    border-radius: 8px;
+}
+
+/* ==================================================================
+   PAYMENT SUCCESS PAGE - Success Message with Receipt & Print
+   ================================================================== */
+
+.payment-success-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.payment-success-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.payment-success-card {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 60px 40px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-icon {
+  margin-bottom: 30px;
+  animation: scaleIn 0.6s ease-out 0.2s both;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.success-icon svg {
+  filter: drop-shadow(0 4px 12px rgba(76, 175, 80, 0.3));
+}
+
+.success-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+  animation: fadeIn 0.6s ease-out 0.3s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.success-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+  animation: fadeIn 0.6s ease-out 0.4s both;
+}
+
+.receipt-details {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  text-align: left;
+  animation: fadeIn 0.6s ease-out 0.5s both;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.receipt-row:last-child {
+  border-bottom: none;
+}
+
+.receipt-row .label {
+  color: #666;
+  font-weight: 500;
+}
+
+.receipt-row .value {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  animation: fadeIn 0.6s ease-out 0.6s both;
+}
+
+.print-btn,
+.back-home-btn {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.print-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.print-btn:hover {
+  background-color: #0b7dda;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(33, 150, 243, 0.3);
+}
+
+.back-home-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.back-home-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(76, 175, 80, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .payment-success-card {
+    padding: 40px 25px;
+  }
+
+  .success-title {
+    font-size: 2rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .receipt-details {
+    padding: 20px;
+  }
+}
+
